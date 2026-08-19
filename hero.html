@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Danish Crown · Tulip Jamonilla · Hero Creator Brief</title>
+<meta name="description" content="You Make the Moment - Tulip Jamonilla creator brief.">
+<meta name="robots" content="noindex,nofollow">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --teal:#0E3A4D; --teal-deep:#06222E; --teal-mid:#14506B;
+  --yellow:#FFCD00; --cream:#FFFBF0; --sand:#F4ECDC;
+  --red:#E63946; --green:#47705D;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--teal); color:var(--cream);
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px}
+section{padding:54px 0;border-top:1px solid rgba(255,251,240,.12)}
+section:first-of-type{border-top:none}
+
+/* ---------- hero ---------- */
+.top{padding:64px 0 46px;text-align:left}
+.eyebrow{
+  font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--yellow);font-weight:700;margin-bottom:26px
+}
+.hi{font-size:clamp(30px,7vw,46px);font-weight:800;line-height:1.12;margin-bottom:18px}
+.hi .wave{display:inline-block;animation:wave 2.4s ease-in-out infinite;transform-origin:70% 70%}
+@keyframes wave{0%,60%,100%{transform:rotate(0)}10%{transform:rotate(14deg)}20%{transform:rotate(-8deg)}30%{transform:rotate(14deg)}40%{transform:rotate(-4deg)}50%{transform:rotate(10deg)}}
+.big{
+  font-size:clamp(44px,12vw,92px);font-weight:900;line-height:.94;
+  letter-spacing:-.02em;color:var(--yellow);margin:26px 0 20px
+}
+.lede{font-size:clamp(17px,2.4vw,20px);max-width:640px;color:rgba(255,251,240,.9)}
+.tierpill{
+  display:inline-block;background:var(--yellow);color:var(--teal);
+  font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;
+  padding:8px 16px;border-radius:999px;margin-bottom:8px
+}
+
+/* ---------- headings ---------- */
+h2{
+  font-size:clamp(26px,5vw,38px);font-weight:900;line-height:1.05;
+  letter-spacing:-.01em;margin-bottom:8px
+}
+h2 .n{color:var(--yellow);margin-right:12px}
+.sub{color:rgba(255,251,240,.66);margin-bottom:26px;font-size:16px}
+
+/* ---------- cards ---------- */
+.cards{display:grid;gap:14px}
+.grid2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{
+  background:var(--cream);color:var(--teal);
+  border-radius:16px;padding:22px 24px
+}
+.card h3{font-size:19px;font-weight:800;margin-bottom:4px}
+.card .tl{font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--teal-mid);font-weight:800;margin-bottom:8px}
+.card p{font-size:15px;line-height:1.5;color:#2b4a58}
+
+/* deliverable cards */
+.deliv{display:flex;gap:18px;align-items:flex-start;
+  background:var(--cream);color:var(--teal);border-radius:16px;padding:24px}
+.deliv .num{
+  flex:none;width:52px;height:52px;border-radius:14px;background:var(--yellow);
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;font-weight:900;color:var(--teal)
+}
+.deliv h3{font-size:20px;font-weight:900;margin-bottom:4px}
+.deliv p{font-size:15px;color:#2b4a58}
+
+.total{
+  background:var(--yellow);color:var(--teal);border-radius:16px;
+  padding:20px 24px;font-weight:900;font-size:19px;text-align:center;margin-top:4px
+}
+
+/* hooks */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{
+  border:1.5px solid rgba(255,205,0,.55);color:var(--cream);
+  border-radius:999px;padding:9px 16px;font-size:14px
+}
+.chip b{color:var(--yellow)}
+
+/* timeline */
+.tl-row{display:flex;gap:18px;padding:16px 0;border-bottom:1px dashed rgba(255,251,240,.18)}
+.tl-row:last-child{border-bottom:none}
+.tl-when{flex:none;width:150px;color:var(--yellow);font-weight:800;font-size:15px}
+.tl-what{font-size:16px}
+.tl-row.peak .tl-what b{color:var(--yellow)}
+
+/* rules */
+.rules{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.rule{border-radius:16px;padding:22px 24px}
+.rule.do{background:rgba(71,112,93,.22);border:1px solid rgba(141,183,164,.5)}
+.rule.dont{background:rgba(230,57,70,.14);border:1px solid rgba(230,57,70,.45)}
+.rule h3{font-size:17px;font-weight:800;margin-bottom:12px}
+.rule.do h3{color:#8DB7A4}
+.rule.dont h3{color:#F5A3A9}
+.rule li{margin:0 0 9px 20px;font-size:15px;line-height:1.5}
+
+/* hashtags */
+.tags{background:var(--teal-deep);border:2px solid var(--yellow);border-radius:16px;padding:26px}
+.tags .t{font-size:clamp(18px,3.6vw,26px);font-weight:900;color:var(--yellow);
+  line-height:1.5;word-break:break-word}
+.tags .must{margin-top:14px;font-size:15px;color:rgba(255,251,240,.9)}
+.tags .must b{color:var(--cream)}
+
+/* product */
+.truth{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.truth div{background:rgba(255,251,240,.08);border-left:3px solid var(--yellow);
+  padding:14px 16px;font-size:15px;border-radius:0 10px 10px 0}
+
+/* close */
+.close{text-align:center;padding:64px 0 78px}
+.close .big{color:var(--yellow)}
+.yes{
+  display:inline-block;background:var(--yellow);color:var(--teal);
+  font-weight:900;font-size:18px;padding:17px 40px;border-radius:999px;
+  text-decoration:none;margin-top:10px
+}
+.sig{margin-top:26px;color:rgba(255,251,240,.6);font-size:14px;font-style:italic}
+footer{padding:26px 0 40px;color:rgba(255,251,240,.4);font-size:12.5px;text-align:center}
+@media(max-width:600px){
+  .tl-row{flex-direction:column;gap:4px}
+  .tl-when{width:auto}
+  .deliv{flex-direction:column;gap:12px}
+}
+</style>
+</head><body>
+
+<div class="wrap">
+  <div class="top">
+    <div class="eyebrow">Tulip Jamonilla &nbsp;·&nbsp; Philippines &nbsp;·&nbsp; 2026</div>
+    <div class="tierpill">Hero Creator · YouTube</div>
+    <h1 class="hi">Hi there <span class="wave">👋</span><br>Welcome to the Campaign!</h1>
+    <div class="big">YOU MAKE<br>THE MOMENT.</div>
+    <p class="lede">Somebody in every Filipino house wakes up first and decides that this
+    morning is going to be worth having. Usually nobody says thank you. This campaign does.</p>
+  </div>
+</div>
+
+<div class="wrap"><section>
+  <h2><span class="n">01</span>Why you</h2>
+  <p class="lede">You are the heart of this campaign. Your audience follows you because you cook and live the way they do, so when you say something is good, people believe you. That is exactly why we want you leading this one.</p>
+</section></div>
+
+<div class="wrap"><section>
+  <h2><span class="n">02</span>The idea, in one word</h2>
+  <p class="sub">Madiskarte.</p>
+  <p class="lede">The Filipino talent for making something out of almost nothing, and
+  calling it pride rather than sacrifice. You do not need a full pantry. You take what you
+  have, and you turn it into a moment. Tulip Jamonilla is not the hero of that story.
+  <b>You are.</b> We just want to be in your kitchen while it happens.</p>
+</section></div>
+
+<div class="wrap"><section>
+  <h2><span class="n">03</span>What you are making</h2>
+  <p class="sub">This is everything. There is no hidden extra list.</p>
+  <div class="cards"><div class="deliv"><div class="num">1</div><div><h3>One YouTube video, 8 to 15 minutes</h3><p>Your normal long-form format. A real morning in your kitchen, with Tulip Jamonilla as part of the cooking, not the subject of an advert.</p></div></div><div class="deliv"><div class="num">2</div><div><h3>One YouTube Short, cut from the same shoot</h3><p>Take the strongest 30 to 45 seconds of what you already filmed. No second shoot day, no extra work.</p></div></div><div class="total">2 posts total · 1 shoot · 3 months usage</div></div>
+  <p class="sub" style="margin-top:18px">Because you have the longest format, you have the most room to tell the story properly. Take your time with the morning before you get to the food.</p>
+</section></div>
+
+<div class="wrap"><section>
+  <h2><span class="n">04</span>Pick your angle</h2>
+  <p class="sub">Choose ONE of these four. Whichever is most honestly you.</p>
+  <div class="cards grid2"><div class="card"><div class="tl">Before they wake up</div><h3>Bago Pa Sila Gising</h3><p>The 7am kitchen. Quiet, fast, made with love. You are not performing, you are providing.</p></div><div class="card"><div class="tl">Just 5 minutes</div><h3>5 Minuto Lang</h3><p>Speed without sacrifice. Three kids out the door, or just you on a Tuesday.</p></div><div class="card"><div class="tl">Saturday morning</div><h3>Sabado Morning</h3><p>More time, so you go further. Everyone around the table. Today is different.</p></div><div class="card"><div class="tl">Mom's cooking, you can't buy this</div><h3>Lutong Ina, Hindi Mabibili</h3><p>The meal as an act of love. A tribute, not a recipe video.</p></div></div>
+</section></div>
+
+<div class="wrap"><section>
+  <h2><span class="n">05</span>Ways to open</h2>
+  <p class="sub">Proven hooks, if you want a running start. Bring your own if you have better.</p>
+  <div class="chips"><div class="chip"><b>Romanticising</b> &nbsp;&ldquo;Romanticising my Tuesday breakfast because I am the moment.&rdquo;</div><div class="chip"><b>POV</b> &nbsp;&ldquo;POV: it's 6:14am and you're the reason this house gets fed.&rdquo;</div><div class="chip"><b>Identity-coded</b> &nbsp;&ldquo;Tell me you're a Filipino mom without telling me.&rdquo;</div><div class="chip"><b>Micro-ritual</b> &nbsp;&ldquo;Things I do every morning that just feel right.&rdquo;</div><div class="chip"><b>Speed flex</b> &nbsp;&ldquo;See what I can do in 5 minutes. Madiskarte.&rdquo;</div><div class="chip"><b>Silent ASMR</b> &nbsp;&ldquo;No voice. Just sizzle.&rdquo;</div></div>
+</section></div>
+
+<div class="wrap"><section>
+  <h2><span class="n">06</span>You write the script</h2>
+  <p class="lede">We are not sending you lines to read out. The whole point is that it
+  sounds like you, so you write it and we approve it. We will send you a short template
+  with blanks to fill in. It takes about twenty minutes.</p>
+  <p class="sub" style="margin-top:16px">One rule that protects everyone: please do not
+  start filming until your script is approved, so no shoot day gets wasted.</p>
+</section></div>
+
+<div class="wrap"><section>
+  <h2><span class="n">07</span>What you can say about the product</h2>
+  <p class="sub">These four are approved. Use your own words. Anything else, just ask us
+  and we will get it cleared.</p>
+  <div class="truth"><div>Imported from Denmark.</div><div>Higher meat content than the category default.</div><div>Lower salt than the category default.</div><div>Ready in about five minutes.</div></div>
+</section></div>
+
+<div class="wrap"><section>
+  <h2><span class="n">08</span>Hashtags</h2>
+  <div class="tags">
+    <div class="t">#YOUMAKETHEMOMENT<br>#TulipJamonillaMOMENT<br>#MadiskarteMOMENT</div>
+    <div class="must">Plus <b>#TulipJamonillaPartner</b> in the caption where people can
+    actually see it, and switch on the paid partnership label. This keeps you and the
+    brand on the right side of the rules, so it is not optional.</div>
+  </div>
+</section></div>
+
+<div class="wrap"><section>
+  <h2><span class="n">09</span>Timeline</h2>
+  <p class="sub">The dates that matter, and the one that does not move.</p>
+  <div class="tl-row"><div class="tl-when">Now</div><div class="tl-what">You say yes, and we send you the script template.</div></div><div class="tl-row"><div class="tl-when">Within a week</div><div class="tl-what">You write your own script and send it back. We get it approved.</div></div><div class="tl-row"><div class="tl-when">Before you film</div><div class="tl-what">Your Tulip Jamonilla arrives. Do not film before your script is approved.</div></div><div class="tl-row"><div class="tl-when">Early September</div><div class="tl-what">You film and send the cut.</div></div><div class="tl-row peak"><div class="tl-when">14 to 21 September</div><div class="tl-what"><b>Your video goes live.</b> This is National Family Week and Kainang Pamilya Mahalaga, when the whole country is talking about family meals.</div></div><div class="tl-row"><div class="tl-when">By 30 September</div><div class="tl-what">Your repost goes up. Then we send you the results.</div></div>
+</section></div>
+
+<div class="wrap"><section>
+  <h2><span class="n">10</span>The short version of the rules</h2>
+  <div class="rules">
+    <div class="rule do"><h3>Please do</h3><ul><li>Hook us in the first 1.5 seconds.</li><li>Shoot in daylight, and make the food look good.</li><li>Keep the real kitchen sound in. The sizzle is half the story.</li><li>On-screen text in Tagalog. Talk the way you actually talk.</li><li>Show yourself tasting it and enjoying it.</li><li>Sensible kitchen hygiene on camera.</li></ul></div>
+    <div class="rule dont"><h3>Please don't</h3><ul><li>No scripted, salesy lines. If you would not say it to a friend, cut it.</li><li>No other brands visible. Check your background.</li><li>No claims about the product beyond the four above.</li><li>No alcohol, cigarettes, nudity, or making fun of anyone.</li><li>Children preferably do not appear. If yours must, we need the brand to approve first.</li><li>No sustainability, climate or political talk.</li></ul></div>
+  </div>
+</section></div>
+
+<div class="wrap">
+  <div class="close">
+    <div class="big">SO? ARE<br>YOU IN?</div>
+    <p class="lede" style="margin:0 auto 26px">Reply to the message that brought you here
+    and we will send your script template today.</p>
+    <a class="yes" href="#">I'm in →</a>
+    <p class="sig">Sila ang gumagawa ng sandali.<br>They are the ones who make the moment.</p>
+  </div>
+</div>
+
+<footer>Tulip Jamonilla &nbsp;·&nbsp; You Make the Moment &nbsp;·&nbsp; Philippines 2026</footer>
+</body></html>
