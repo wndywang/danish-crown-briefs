@@ -111,6 +111,19 @@ h2 .b{color:var(--red)} .s-teal h2 .b,.s-deep h2 .b,.s-red h2 .b{color:var(--yel
 .float.dish{right:6%;bottom:-40px;width:min(30vw,300px);border-radius:20px;
   animation:float 9s ease-in-out infinite reverse;opacity:.95}
 .float.tr{right:-30px;top:8%;width:min(38vw,380px);border-radius:22px}
+
+/* Two-column layout for slides that carry product art. The art gets its own column so
+   it can never sit on top of the copy - an absolutely positioned float was covering the
+   fourth product truth. */
+.split{display:grid;grid-template-columns:1.08fr .92fr;gap:46px;align-items:center}
+.split .art{position:relative}
+.split .art .can{width:100%;display:block;
+  filter:drop-shadow(0 34px 54px rgba(0,0,0,.42));animation:float 7s ease-in-out infinite}
+.split .art .dish{position:absolute;left:-8%;bottom:-10%;width:46%;border-radius:16px;
+  box-shadow:0 22px 44px -18px rgba(0,0,0,.5);
+  animation:float 9s ease-in-out infinite reverse}
+/* keep copy clear of any float-positioned art on the other slides */
+.textcol{max-width:min(60%,660px)}
 .blob{
   position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;z-index:0;
   animation:drift 14s ease-in-out infinite alternate
@@ -171,7 +184,9 @@ h2 .b{color:var(--red)} .s-teal h2 .b,.s-deep h2 .b,.s-red h2 .b{color:var(--yel
 .must b{font-weight:900}
 
 /* truths */
-.truths{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.truths{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+.split .truths{grid-template-columns:1fr 1fr}
+@media(max-width:620px){.split .truths{grid-template-columns:1fr}}
 .truths div{padding:14px 16px;border-radius:0 12px 12px 0;font-size:14.5px;font-weight:600;
   border-left:4px solid var(--red);background:rgba(14,58,77,.07)}
 .s-teal .truths div,.s-deep .truths div{background:rgba(255,251,240,.1);border-left-color:var(--yellow)}
@@ -220,8 +235,12 @@ h2 .b{color:var(--red)} .s-teal h2 .b,.s-deep h2 .b,.s-red h2 .b{color:var(--yel
 }
 @media(max-width:720px){
   .slide{padding:88px 20px 76px}
-  .float.r{width:58vw;right:-30px;bottom:-10px;opacity:.95}
+  .float.r{width:54vw;right:-34px;bottom:-24px;opacity:.9}
   .float.dish{display:none}
+  .split{grid-template-columns:1fr;gap:26px}
+  .split .art{max-width:330px;margin:0 auto}
+  .split .art .dish{display:none}
+  .textcol{max-width:100%}
   .float.tr{display:none}
   .tl .row{flex-direction:column;gap:3px}.tl .w{width:auto}
   .arrow{display:none}
