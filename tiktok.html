@@ -240,7 +240,40 @@ h2 .b{color:var(--red)} .s-teal h2 .b,.s-deep h2 .b,.s-red h2 .b{color:var(--yel
   .rev{opacity:1;transform:none}
 }
 @media(max-width:720px){
-  .slide{padding:88px 20px 76px}
+  .slide{padding:74px 16px 54px;align-items:flex-start}
+  .inner{padding-top:6px}
+  h1{font-size:clamp(26px,7.4vw,34px)}
+  .mega{font-size:clamp(38px,12.5vw,58px);margin:10px 0 14px}
+  h2{font-size:clamp(27px,8.4vw,38px)}
+  .lede{font-size:16px;line-height:1.5}
+  .sub{font-size:14px;margin-bottom:16px}
+  .eyebrow{margin-bottom:12px;font-size:10px}
+  section,.card{border-radius:14px}
+  .deliv{padding:16px;gap:12px}
+  .deliv .num{width:40px;height:40px;font-size:19px}
+  .deliv h3{font-size:16px} .deliv p{font-size:13.5px}
+  .total{padding:13px;font-size:15px}
+  .truths div{padding:11px 13px;font-size:13.5px}
+  .tagbig{font-size:clamp(21px,7.4vw,32px);line-height:1.22}
+  .must{font-size:13.5px;padding:13px 14px;margin-top:16px}
+  .flag{font-size:13.5px;padding:12px 14px;margin-bottom:14px}
+  .chip{font-size:12.5px;padding:7px 12px}
+  .rule{padding:15px 16px} .rule li{font-size:13px;margin-bottom:6px}
+  .rule h3{font-size:14.5px;margin-bottom:7px}
+  .tl .row{padding:10px 0} .tl .w{font-size:13.5px} .tl .t{font-size:14px}
+  .tl .row.peak{padding:12px}
+  .yes{font-size:16px;padding:14px 32px}
+  .sig{font-size:12.5px;margin-top:16px}
+  /* pillars: swipe a row of cards instead of scrolling a tall column */
+  .g4{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+      margin:0 -16px;padding:2px 16px 8px;scrollbar-width:none}
+  .g4::-webkit-scrollbar{display:none}
+  .g4>.pill{flex:0 0 76%;scroll-snap-align:center}
+  .phone img{aspect-ratio:9/12}
+  .pill .txt{padding:13px 15px 16px}
+  .pill h3{font-size:15.5px} .pill p{font-size:12.5px}
+  .pill .quote{font-size:12px;margin-top:8px}
+  .swipe{display:block}
   .float.r{width:54vw;right:-34px;bottom:-24px;opacity:.9}
   .float.dish{display:none}
   .split{grid-template-columns:1fr;gap:26px}
@@ -250,7 +283,19 @@ h2 .b{color:var(--red)} .s-teal h2 .b,.s-deep h2 .b,.s-red h2 .b{color:var(--yel
   .float.tr{display:none}
   .tl .row{flex-direction:column;gap:3px}.tl .w{width:auto}
   .arrow{display:none}
+  .nav{padding:9px 12px}
+  .nav b{display:none}
+  .nav button{font-size:11.5px;padding:6px 11px}
+  .hint{font-size:10.5px;bottom:10px}
 }
+.swipe{display:none;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  opacity:.6;margin-top:8px}
+/* shown only when a slide is taller than the screen, so nobody misses content below */
+.more{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:3;
+  font-size:22px;line-height:1;opacity:0;pointer-events:none;transition:opacity .3s;
+  animation:bob 1.9s ease-in-out infinite}
+.slide.tall.attop .more{opacity:.55}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
 </style></head><body>
 
 <div class="bar" id="bar"></div>
@@ -350,6 +395,7 @@ h2 .b{color:var(--red)} .s-teal h2 .b,.s-deep h2 .b,.s-red h2 .b{color:var(--yel
       <p class="sub rev" style="margin-top:8px">Four ways into the same story. Choose the one
       that is most honestly you, then make it yours.</p>
       <div class="grid g4"><div class="pill rev"><div class="phone"><img src="img/pillar1.jpg" alt="Before they wake up" loading="lazy"></div><div class="txt"><div class="tag">Pillar 01 · Before they wake up</div><h3>Bago Pa Sila <span style="color:var(--red)">Gising.</span></h3><p>The 7am kitchen. Quiet, fast, made with love. You are not performing, you are providing.</p><div class="quote">&ldquo;7am. Nobody's watching. This one's for us.&rdquo;</div></div></div><div class="pill rev"><div class="phone"><img src="img/pillar2.jpg" alt="Just 5 minutes" loading="lazy"></div><div class="txt"><div class="tag">Pillar 02 · Just 5 minutes</div><h3>5 Minuto <span style="color:var(--red)">Lang.</span></h3><p>Speed without sacrifice. Three kids out the door, or just you on a Tuesday.</p><div class="quote">&ldquo;5 minutes. One pan. Everyone happy.&rdquo;</div></div></div><div class="pill rev"><div class="phone"><img src="img/pillar3.jpg" alt="Saturday morning" loading="lazy"></div><div class="txt"><div class="tag">Pillar 03 · Saturday morning</div><h3>Sabado <span style="color:var(--red)">Morning.</span></h3><p>More time, so you go further. Everyone around the table. Today is different.</p><div class="quote">&ldquo;Saturday. No alarm. Let's make something good.&rdquo;</div></div></div><div class="pill rev"><div class="phone"><img src="img/pillar4.jpg" alt="Mom's cooking, you can't buy this" loading="lazy"></div><div class="txt"><div class="tag">Pillar 04 · Mom's cooking, you can't buy this</div><h3>Lutong Ina, <span style="color:var(--red)">Hindi Mabibili.</span></h3><p>The meal as an act of love. A tribute, not a recipe video. This is the one that earns the deepest comments.</p><div class="quote">&ldquo;This is my mom's recipe. I just added Jamonilla.&rdquo;</div></div></div></div>
+      <div class="swipe rev">Swipe for all four →</div>
     </div>
   </section>
 
@@ -403,7 +449,9 @@ h2 .b{color:var(--red)} .s-teal h2 .b,.s-deep h2 .b,.s-red h2 .b{color:var(--yel
         <span class="b">YOU IN?</span></div>
       <p class="lede rev" style="margin:0 auto 20px">Reply to the message that brought you here
       and we'll send your script template today.</p>
-      <a class="yes rev" href="#">I'm in →</a>
+      <a class="yes rev" href="mailto:onerevcollabs@gmail.com?cc=info@getugc.io&subject=I%27m%20in%20-%20Tulip%20Jamonilla%20campaign%20%28Creator%20Brief%20%C2%B7%20TikTok%29&body=Hi%21%0A%0AI%27d%20like%20to%20join%20the%20Tulip%20Jamonilla%20%22You%20Make%20the%20Moment%22%20campaign.%0A%0AMy%20name%3A%0AMy%20handle%3A%0APlatform%3A%0AFollowers%3A%0AAnything%20you%20should%20know%3A%0A%0AThanks%21">I'm in →</a>
+      <p class="sub rev" style="margin-top:14px;opacity:.75">Opens an email, just fill in your
+      details and send.</p>
       <p class="sig rev">Sila ang gumagawa ng sandali.<br>They are the ones who make the moment.</p>
     </div>
   </section>
@@ -429,11 +477,27 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{
   if(e.isIntersecting){e.target.classList.add('in');
     const i=slides.indexOf(e.target);
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    btns[i]?.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});
     bar.style.width=((i+1)/slides.length*100)+'%';
     document.querySelector('.hint')?.classList.toggle('dark',
       /s-(yellow|cream|sand)/.test(e.target.className));
   }}),{root:deck,threshold:.55});
 slides.forEach(s=>io.observe(s));
+// mark slides that overflow, and hide the cue once the reader starts scrolling
+function marktall(){
+  slides.forEach(s=>{
+    const tall=s.scrollHeight>s.clientHeight+6;
+    s.classList.toggle('tall',tall);
+    s.classList.toggle('attop',tall&&s.scrollTop<24);
+    if(tall&&!s.querySelector('.more')){
+      const d=document.createElement('div');d.className='more';d.textContent='⌄';
+      s.appendChild(d);
+    }
+  });
+}
+marktall(); addEventListener('resize',marktall);
+slides.forEach(s=>s.addEventListener('scroll',()=>{
+  s.classList.toggle('attop',s.scrollTop<24);},{passive:true}));
 deck.addEventListener('scroll',()=>{
   const h=document.querySelector('.hint'); if(h) h.style.opacity = deck.scrollLeft>40?0:.9;
 },{passive:true});

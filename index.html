@@ -238,7 +238,40 @@ h2 .b{color:var(--red)} .s-teal h2 .b,.s-deep h2 .b,.s-red h2 .b{color:var(--yel
   .rev{opacity:1;transform:none}
 }
 @media(max-width:720px){
-  .slide{padding:88px 20px 76px}
+  .slide{padding:74px 16px 54px;align-items:flex-start}
+  .inner{padding-top:6px}
+  h1{font-size:clamp(26px,7.4vw,34px)}
+  .mega{font-size:clamp(38px,12.5vw,58px);margin:10px 0 14px}
+  h2{font-size:clamp(27px,8.4vw,38px)}
+  .lede{font-size:16px;line-height:1.5}
+  .sub{font-size:14px;margin-bottom:16px}
+  .eyebrow{margin-bottom:12px;font-size:10px}
+  section,.card{border-radius:14px}
+  .deliv{padding:16px;gap:12px}
+  .deliv .num{width:40px;height:40px;font-size:19px}
+  .deliv h3{font-size:16px} .deliv p{font-size:13.5px}
+  .total{padding:13px;font-size:15px}
+  .truths div{padding:11px 13px;font-size:13.5px}
+  .tagbig{font-size:clamp(21px,7.4vw,32px);line-height:1.22}
+  .must{font-size:13.5px;padding:13px 14px;margin-top:16px}
+  .flag{font-size:13.5px;padding:12px 14px;margin-bottom:14px}
+  .chip{font-size:12.5px;padding:7px 12px}
+  .rule{padding:15px 16px} .rule li{font-size:13px;margin-bottom:6px}
+  .rule h3{font-size:14.5px;margin-bottom:7px}
+  .tl .row{padding:10px 0} .tl .w{font-size:13.5px} .tl .t{font-size:14px}
+  .tl .row.peak{padding:12px}
+  .yes{font-size:16px;padding:14px 32px}
+  .sig{font-size:12.5px;margin-top:16px}
+  /* pillars: swipe a row of cards instead of scrolling a tall column */
+  .g4{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+      margin:0 -16px;padding:2px 16px 8px;scrollbar-width:none}
+  .g4::-webkit-scrollbar{display:none}
+  .g4>.pill{flex:0 0 76%;scroll-snap-align:center}
+  .phone img{aspect-ratio:9/12}
+  .pill .txt{padding:13px 15px 16px}
+  .pill h3{font-size:15.5px} .pill p{font-size:12.5px}
+  .pill .quote{font-size:12px;margin-top:8px}
+  .swipe{display:block}
   .float.r{width:54vw;right:-34px;bottom:-24px;opacity:.9}
   .float.dish{display:none}
   .split{grid-template-columns:1fr;gap:26px}
@@ -248,7 +281,19 @@ h2 .b{color:var(--red)} .s-teal h2 .b,.s-deep h2 .b,.s-red h2 .b{color:var(--yel
   .float.tr{display:none}
   .tl .row{flex-direction:column;gap:3px}.tl .w{width:auto}
   .arrow{display:none}
+  .nav{padding:9px 12px}
+  .nav b{display:none}
+  .nav button{font-size:11.5px;padding:6px 11px}
+  .hint{font-size:10.5px;bottom:10px}
 }
+.swipe{display:none;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  opacity:.6;margin-top:8px}
+/* shown only when a slide is taller than the screen, so nobody misses content below */
+.more{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:3;
+  font-size:22px;line-height:1;opacity:0;pointer-events:none;transition:opacity .3s;
+  animation:bob 1.9s ease-in-out infinite}
+.slide.tall.attop .more{opacity:.55}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
 
 html,body{overflow:auto;height:auto}
 body{background:var(--teal);display:flex;align-items:center;min-height:100dvh}
